@@ -58,11 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeSyncService.cs">
+    <Compile Include="DnsSyncService.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="EmployeeSyncService.Designer.cs">
-      <DependentUpon>EmployeeSyncService.cs</DependentUpon>
+    <Compile Include="DnsSyncService.Designer.cs">
+      <DependentUpon>DnsSyncService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
