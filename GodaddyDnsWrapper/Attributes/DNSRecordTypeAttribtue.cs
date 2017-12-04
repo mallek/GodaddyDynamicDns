@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+
+namespace GodaddyDnsWrapper.Attributes
+{
+    [AttributeUsage(AttributeTargets.Property |
+AttributeTargets.Field, AllowMultiple = false)]
+    sealed internal class DNSRecordTypeAttribtue : ValidationAttribute
+    {
+        public List<string> ValidValue = new List<string> { "AA", "AAAA", "CNAME", "MX", "NS", "SOA", "SRV", "TXT" };
+        public override bool IsValid(object value)
+        {
+            if (value == null)
+                return true;
+            if (ValidValue.FirstOrDefault(c => c == value.ToString().ToUpper()) == null)
+                return false;
+            else
+                return true;
+        }
+    }
+}

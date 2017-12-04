@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodaddyDnsWrapper", "GodaddyDnsWrapper\GodaddyDnsWrapper.csproj", "{2CBE0A7D-F264-42C8-AC5A-B1DCEF3091E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GodaddyDnsWrapper.Tests", "GodaddyDnsWrapper.Tests\GodaddyDnsWrapper.Tests.csproj", "{ECFA6591-DDF9-4D68-9D9F-BAB4EC1B976D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnsSyncTool.WindowsService", "DnsSyncTool\DnsSyncTool.WindowsService.csproj", "{2E6BC942-0641-4A73-9F4E-56AD52C21A2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternalJobManager", "InternalJobManager\InternalJobManager.csproj", "{B4E8246E-5415-4997-8968-47D0D0153460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Common", "Core.Common\Core.Common.csproj", "{66B5791F-E215-4240-9F00-E1D6D580580A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CBE0A7D-F264-42C8-AC5A-B1DCEF3091E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CBE0A7D-F264-42C8-AC5A-B1DCEF3091E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CBE0A7D-F264-42C8-AC5A-B1DCEF3091E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CBE0A7D-F264-42C8-AC5A-B1DCEF3091E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECFA6591-DDF9-4D68-9D9F-BAB4EC1B976D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFA6591-DDF9-4D68-9D9F-BAB4EC1B976D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFA6591-DDF9-4D68-9D9F-BAB4EC1B976D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFA6591-DDF9-4D68-9D9F-BAB4EC1B976D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6BC942-0641-4A73-9F4E-56AD52C21A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6BC942-0641-4A73-9F4E-56AD52C21A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6BC942-0641-4A73-9F4E-56AD52C21A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6BC942-0641-4A73-9F4E-56AD52C21A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E8246E-5415-4997-8968-47D0D0153460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E8246E-5415-4997-8968-47D0D0153460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E8246E-5415-4997-8968-47D0D0153460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E8246E-5415-4997-8968-47D0D0153460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B5791F-E215-4240-9F00-E1D6D580580A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B5791F-E215-4240-9F00-E1D6D580580A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B5791F-E215-4240-9F00-E1D6D580580A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B5791F-E215-4240-9F00-E1D6D580580A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3081E08A-74A1-4F23-937C-3B29ADC85E7B}
+	EndGlobalSection
+EndGlobal
