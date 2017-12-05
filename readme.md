@@ -17,6 +17,9 @@ You can set up the application constants in one of two ways
     - SecretKey
     - SyncDomain
 
+ - Build the application in visual studio
+ - My libraries are written in dotnet standard, if there is request for a cross platform version I will build a loader
+
 >New-Service -Name "DnsSync" -BinaryPathName "c:\GodaddyDnsWrapper\DnsSyncTool\
 bin\Release\DnsSyncTool.WindowsService.exe" -StartupType auto -DisplayName "DnsSync" -Description "This service dynamicl
 y updated ipv6 and ipv4 addresses"
