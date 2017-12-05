@@ -6,6 +6,9 @@ To run this application you will need to set up a developer account with godaddy
  - https://developer.godaddy.com/getstarted
  - You must own a domain from Godaddy
  - your records will be on the "home" subdomain ``` (home.your-domain.com) ```
+ - creates A and AAAA records (they will be added if they don't exist)
+
+ ***If you have records on the home subdomain they will be overwritten***
 
 You can set up the application constants in one of two ways
  1) Edit the strings in the Core.Common.Constants file
