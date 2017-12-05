@@ -37,17 +37,17 @@ namespace InternalJobManager
 
         private static async void CheckIpDnsEvent(AddressFamily family, DnsAddressCache currentAddress)
         {
-            string recordType, publicIpaddressServiceUrl;
+            string recordType, publicIpAddressServiceUrl;
 
             switch (family)
             {
                 case AddressFamily.InterNetwork:
                     recordType = "A";
-                    publicIpaddressServiceUrl = "http://ipv4bot.whatismyipaddress.com/";
+                    publicIpAddressServiceUrl = "http://ipv4bot.whatismyipaddress.com/";
                     break;
                 case AddressFamily.InterNetworkV6:
                     recordType = "AAAA";
-                    publicIpaddressServiceUrl = "http://ipv6bot.whatismyipaddress.com/";
+                    publicIpAddressServiceUrl = "http://ipv6bot.whatismyipaddress.com/";
                     break;
 
                 default:
@@ -56,7 +56,7 @@ namespace InternalJobManager
 
             var client = new GodaddyDnsWrapper.Client(Constants.AccessKey, Constants.SecretKey);
 
-            string currentIp = GetDnsAddress(publicIpaddressServiceUrl, family);
+            string currentIp = GetDnsAddress(publicIpAddressServiceUrl, family);
             Log.Debug($"Current {family} address: {currentIp}");
 
             if (string.IsNullOrEmpty(currentAddress.CurrentValue) || _cacheCount > 5)
@@ -85,11 +85,11 @@ namespace InternalJobManager
 
         private static string GetDnsAddress(string host, AddressFamily family)
         {
-            var ipclient = new RestClient(host);
-            var iprequest = new RestRequest(Method.GET);
-            iprequest.AddHeader("cache-control", "no-cache");
-            IRestResponse ipresponse = ipclient.Execute(iprequest);
-            return ValidateIpAddress(ipresponse.Content, family) ? ipresponse.Content : string.Empty;
+            var ipClient = new RestClient(host);
+            var ipRequest = new RestRequest(Method.GET);
+            ipRequest.AddHeader("cache-control", "no-cache");
+            IRestResponse ipResponse = ipClient.Execute(ipRequest);
+            return ValidateIpAddress(ipResponse.Content, family) ? ipResponse.Content : string.Empty;
         }
 
         private static bool ValidateIpAddress(string addr, AddressFamily family)
