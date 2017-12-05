@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Core.Common;
+using GodaddyDnsWrapper.Requests;
+using RestSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Timers;
-using Core.Common;
-using GodaddyDnsWrapper.Requests;
-using RestSharp;
 
 namespace InternalJobManager
 {
@@ -20,14 +20,15 @@ namespace InternalJobManager
         public static void RunJobs()
         {
             Timer aTimer = new Timer();
-            aTimer.Elapsed += (sender, e) => CheckIpDnsEvent(AddressFamily.InterNetworkV6, CurrentIpV6Address);
-            aTimer.Elapsed += (sender, e) => CheckIpDnsEvent(AddressFamily.InterNetwork, CurrentIpV4Address);
             aTimer.Elapsed += IncreaseCacheCount;
+            aTimer.Elapsed += (sender, e) => CheckIpDnsEvent(AddressFamily.InterNetwork, CurrentIpV4Address);
+            //If you only have ipv4 comment out the line below
+            aTimer.Elapsed += (sender, e) => CheckIpDnsEvent(AddressFamily.InterNetworkV6, CurrentIpV6Address);
             aTimer.Interval = TimeSpan.FromMinutes(Constants.SyncTimeInMin).TotalMilliseconds;
             aTimer.Enabled = true;
             Log.Info($"Syncing {Constants.SubDomain}.{Constants.Domain} every {Constants.SyncTimeInMin} minute(s)");
         }
-        
+
         private static void IncreaseCacheCount(object sender, ElapsedEventArgs e)
         {
             Log.Debug("Tick");
@@ -48,7 +49,7 @@ namespace InternalJobManager
                     recordType = "AAAA";
                     publicIpaddressServiceUrl = "http://ipv6bot.whatismyipaddress.com/";
                     break;
-      
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(family), family, null);
             }

@@ -1,13 +1,13 @@
-﻿using System;
+﻿using GodaddyDnsWrapper.Base;
+using GodaddyDnsWrapper.Helper;
+using GodaddyDnsWrapper.Responses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using GodaddyDnsWrapper.Base;
-using GodaddyDnsWrapper.Helper;
-using GodaddyDnsWrapper.Responses;
 
 namespace GodaddyDnsWrapper
 {
@@ -15,7 +15,7 @@ namespace GodaddyDnsWrapper
     {
         private string _accessKey { get; set; }
         private string _secretKey { get; set; }
-       // private string _rootPath { get; set; } = "https://api.ote-godaddy.com/";
+        // private string _rootPath { get; set; } = "https://api.ote-godaddy.com/"; //test API
         private string _rootPath { get; set; } = "https://api.godaddy.com/api/v1/";
 
         /// <summary>
